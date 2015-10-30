@@ -69,3 +69,9 @@ GAPI (because now Google Analytics API only supports OAuth2) will require you to
   3. Download the .p12 file for this service account, upload to the same folder as **gapi.class.php**
   4. Enable 'analytics API' in the [Google Developers console]((https://console.developers.google.com/project))
   5. In Google Analytics *Administration > User Management*, give the service account 'Read and Analyse' permissions on the analytics accounts you want to access
+ 
+## Frequent issues and how to fix them
+  * Error: `{ "error": "invalid_grant", "error_description": "Bad Request" }` on a previously working setup. Fix: Check your server time, and bring it in sync with the network time.
+  * Error: Just not working the first time. E.g., https://github.com/erebusnz/gapi-google-analytics-php-interface/issues/135. Fix: Refer to the setup instructions above, and make sure you followed all.
+  * Error: Older credentials not working. Fix: If you're still using username, password combination, it won't work anymore, since the Google Analytics API moved to proper OAuth quite some time ago.
+
